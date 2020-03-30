@@ -1,0 +1,6 @@
+hello:
+  handler: src/handler.hello
+  events:
+    - http:
+        path: users/create
+        method: get

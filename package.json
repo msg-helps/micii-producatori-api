@@ -1,0 +1,13 @@
+{
+  "name": "micii-producatori-api",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "sls offline"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serverless-offline": "^6.1.2",
+    "serverless-plugin-typescript": "^1.1.9",
+    "typescript": "^3.8.3"
+  }
+}
