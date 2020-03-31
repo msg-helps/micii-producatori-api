@@ -4,6 +4,7 @@
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint --fix \"src/**/*.@(js|jsx|ts|tsx)\"",
+    "check:compile": "tsc --noEmit",
     "check:lint": "eslint \"src/**/*.@(js|jsx|ts|tsx)\"",
     "check:format": "prettier --check .",
     "check": "npm-run-all check:*",
