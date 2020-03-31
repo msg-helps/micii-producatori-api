@@ -2,7 +2,8 @@
   "name": "micii-producatori-api",
   "version": "0.1.0",
   "scripts": {
-    "start": "sls offline"
+    "start": "sls offline",
+    "deploy": "sls deploy"
   },
   "dependencies": {},
   "devDependencies": {

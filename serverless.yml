@@ -7,5 +7,6 @@ plugins:
 provider:
   name: aws
   runtime: nodejs12.x
+  region: eu-west-1
 
 functions: ${file(src/routes.yml)}
