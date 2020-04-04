@@ -1,4 +1,4 @@
-world.create:
+worldCreate:
   handler: src/handlers/world.create
   events:
     - http:
