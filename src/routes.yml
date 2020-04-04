@@ -1,6 +1,6 @@
-hello:
-  handler: src/handler.hello
+world.create:
+  handler: src/handlers/world.create
   events:
     - http:
-        path: users/create
-        method: get
+        path: world/{pathParameter1}/{pathParameter2}
+        method: post
