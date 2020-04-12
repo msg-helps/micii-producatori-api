@@ -9,6 +9,10 @@ mainTable:
         AttributeType: S
       - AttributeName: g1pk
         AttributeType: S
+      - AttributeName: g2pk
+        AttributeType: S
+      - AttributeName: g2sk
+        AttributeType: S
     KeySchema:
       - AttributeName: pk
         KeyType: HASH
@@ -23,6 +27,17 @@ mainTable:
           - AttributeName: g1pk
             KeyType: HASH
           - AttributeName: pk
+            KeyType: RANGE
+        Projection:
+          ProjectionType: ALL
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+      - IndexName: gsi2
+        KeySchema:
+          - AttributeName: g2pk
+            KeyType: HASH
+          - AttributeName: g2sk
             KeyType: RANGE
         Projection:
           ProjectionType: ALL
