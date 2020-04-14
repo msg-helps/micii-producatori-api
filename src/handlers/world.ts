@@ -1,3 +1,4 @@
+import { database } from './../database/connection'
 import { Handler } from './types'
 
 type PathParameters = {
@@ -35,6 +36,16 @@ export const create: Handler = async (event) => {
     null,
     2,
   )
+
+  const params = {
+    TableName: 'usersTable',
+    Item: {
+      email: 'joe@email.com',
+    },
+  }
+
+  const awsRequest = await database.put(params)
+  await awsRequest.promise()
 
   return {
     statusCode: 200,
